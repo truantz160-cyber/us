@@ -273,9 +273,21 @@ audio {
             <div class="caption-sub">I'd relieve this forever</div>
         </div>
     </div>
-
 </div>
 
+<!-- PAGE 5 -->
+<div class="section" id="page5">
+    <div>
+        <h2 style="font-size:2.4rem; margin-bottom:14px;">
+            Merry Christmas 🤍
+        </h2>
+        <p style="font-size:1.2rem; opacity:0.85; max-width:600px; margin:auto; line-height:1.7;">
+            Every memory with you is my favorite.<br><br>
+            No matter where life takes us,<br>
+            this will always be us.
+        </p>
+    </div>
+</div>
 
 <script>
 let currentPage = 1;
@@ -303,7 +315,13 @@ function goToPage(n) {
 
 function startMemories() {
     goToPage(4);
-    setInterval(nextSlide, 6500);
+
+    let slideTimer = setInterval(nextSlide, 6500);
+
+    setTimeout(() => {
+        clearInterval(slideTimer);
+        goToPage(5);
+    }, slides.length * 6500 + 2000);
 }
 
 function nextSlide() {
@@ -315,6 +333,7 @@ function nextSlide() {
 
 </body>
 </html>
+
 
 
 
