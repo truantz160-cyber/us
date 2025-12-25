@@ -6,12 +6,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+.caption-box {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    padding: 16px 26px;
+    border-radius: 18px;
+    text-align: center;
+    color: #f5efe9;
+    max-width: 82%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
+
+.caption-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.caption-sub {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+    .caption-title {
+        font-size: 1.2rem;
+    }
+    .caption-sub {
+        font-size: 0.85rem;
+    }
+}
+
 
 body {
     background: linear-gradient(135deg, #2b1d14, #1f1410);
@@ -263,4 +292,5 @@ function nextSlide() {
 
 </body>
 </html>
+
 
